@@ -1,38 +1,48 @@
 .App {
-  text-align: center;
+  margin-left: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  margin-top: 25px;
+  background-color: rgb(48, 158, 231);
   color: white;
+  width: 120px;
+  height: 50px;
+  font-size: 19px;
+  border-radius: 5px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+button:disabled {
+  background-color: grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Cientifica {
+  margin-left: 100px;
+}
+
+.Valores {
+  margin-top: 40px;
+}
+
+.Valores input {
+  display: block;
+  margin: 20px 0px;
+  height: 30px;
+  width: 340px;
+}
+
+.Calcular {
+  background-color: green;
+  width: 340px;
+}
+
+.Header-historico {
+  margin-top: 40px;
+  display: flex;
+}
+
+.Limpar {
+  margin-left: 1300px;
+  width: 200px;
 }

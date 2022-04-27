@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from "react";
 
 function App() {
+  const [tipoCalculadora, setTipoCalculadora] = useState(false);
+
+  const selecionarCalculadora = () => {
+    tipoCalculadora = setTipoCalculadora(true);
+  };
+
+  const limparHistorico = () => {
+    console.log("limpou");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <h1>Título - Calculadora Vrau</h1>
+      <span>
+        <button
+          className="Basica"
+          onClick={selecionarCalculadora}
+          disabled={tipoCalculadora}
         >
-          Learn React
-        </a>
-      </header>
+          Básica
+        </button>
+        <button className="Cientifica">Cientifica</button>
+      </span>
+      <div className="Valores">
+        <input type="number" placeholder="Valor A"></input>
+        <input type="number" placeholder="Valor B"></input>
+        <button className="Calcular">Calcular</button>
+      </div>
+      <div className="Histórico">
+        <div className="Header-historico">
+          <h2>Histórico</h2>
+          <button className="Limpar" onClick={limparHistorico}>
+            Limpar Histórico
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
