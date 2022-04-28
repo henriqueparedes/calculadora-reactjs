@@ -46,3 +46,12 @@ button:disabled {
   margin-left: 1300px;
   width: 200px;
 }
+
+.Funcoes {
+  display: flex;
+  gap: 10px;
+}
+
+.Funcoes button {
+  width: 100px;
+}

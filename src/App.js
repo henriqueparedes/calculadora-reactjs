@@ -1,11 +1,19 @@
 import "./App.css";
 import React, { useState } from "react";
 
-function App() {
-  const [tipoCalculadora, setTipoCalculadora] = useState(false);
+import CalculadoraBasica from "./components/CalculadoraBasica/CalculadoraBasica";
+import CalculadoraCientifica from "./components/CalculadoraCientifica/CalculadoraCientifica";
 
-  const selecionarCalculadora = () => {
-    tipoCalculadora = setTipoCalculadora(true);
+function App() {
+  const [calculadoraBasica, setCalculadoraBasica] = useState(false);
+  const [calculadoraCientifica, setCalculadoraCientifica] = useState(false);
+
+  const onClickCalculadoraBasica = () => {
+    setCalculadoraCientifica(!calculadoraCientifica);
+  };
+
+  const onClickCalculadoraCientifica = () => {
+    setCalculadoraBasica(!calculadoraBasica);
   };
 
   const limparHistorico = () => {
@@ -17,12 +25,22 @@ function App() {
       <span>
         <button
           className="Basica"
-          onClick={selecionarCalculadora}
-          disabled={tipoCalculadora}
+          onClick={onClickCalculadoraBasica}
+          disabled={calculadoraBasica}
         >
           Básica
         </button>
-        <button className="Cientifica">Cientifica</button>
+        <button
+          className="Cientifica"
+          onClick={onClickCalculadoraCientifica}
+          disabled={calculadoraCientifica}
+        >
+          Cientifica
+        </button>
+        <div className="Funcoes">
+          {calculadoraCientifica ? <CalculadoraBasica /> : null}
+          {calculadoraBasica ? <CalculadoraCientifica /> : null}
+        </div>
       </span>
       <div className="Valores">
         <input type="number" placeholder="Valor A"></input>
