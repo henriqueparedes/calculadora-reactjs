@@ -1,15 +1,11 @@
 import CalculadoraBasica from "./calculadoraBasica";
 
-export default class CalculadoraCientifica extends CalculadoraBasica {
-  aoQuadrado(a) {
-    return Math.pow(a, 2);
-  }
-
-  raizQuadrada(a) {
-    return Math.pow(a, 1 / 2);
+export default class CalculadoraCientificaClass extends CalculadoraBasica {
+  raiz(a, b) {
+    return Math.pow(Number(a), 1 / Number(b));
   }
 
   porcentagem = (a, b) => {
-    return (a / 100) * 525;
+    return (Number(b) / 100) * Number(a);
   };
 }

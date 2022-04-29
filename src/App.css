@@ -55,3 +55,7 @@ button:disabled {
 .Funcoes button {
   width: 100px;
 }
+
+.Historico {
+  display: block;
+}
