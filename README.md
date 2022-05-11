@@ -24,3 +24,5 @@ Opções que aparecem quando clicado em calculadora Básica:
 Opções que aparecem quando clicado em calculadora Científica:
 
 ![imagem](public/cientifica.png)
+
+Você consegue utilizar a aplicação aqui: https://reactjs-calculadora.herokuapp.com/
